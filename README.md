@@ -1,4 +1,4 @@
-# Live Link : https://ai-med.netlify.app
+# Live Link : [https://ai-med.netlify.app](https://ai-meds.netlify.app/)
 Figma Link : https://www.figma.com/file/1bD3tNpzbMkXh04Fid5Ddl/Untitled?type=design&node-id=0%3A1&mode=design&t=VgmkzUmeBAUvdLb3-1
 # Health Companion App
 
