@@ -37,3 +37,4 @@ Enjoy using the Health Companion App and stay healthy!
 
 ## Contributes
 Devina, Akshat, Sajag, Chirag
+# AI-Med

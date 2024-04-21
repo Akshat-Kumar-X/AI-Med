@@ -1,17 +1,18 @@
 import React from 'react';
 import Blogcard from './Blogcard';
 import { db, storage } from '../helper/appwrite';
+import toast from 'react-hot-toast';
 
 const Blogs = () => {
   const [blogs, setBlogs] = React.useState([]);
 
   const getBlogs = async () => {
     try {
-      const result = await db.listDocuments('65f370068f6e9602ae3b', '65f37014559fbba73560');
+      const result = await db.listDocuments('65f7c1fbb1ae554900c8', '6622a6c8ba81957d34fc');
       if (result.total) {
         const imageIds = result.documents.map(blog => blog.cover);
         const imagePromises = imageIds.map(imageId =>
-          storage.getFileView('65f370d2bf74728cc623', imageId)
+          storage.getFileView('6622a6697659ecc89172', imageId)
         );
 
         const images = await Promise.all(imagePromises);
@@ -24,7 +25,7 @@ const Blogs = () => {
         setBlogs(blogs);
       }
     } catch (err) {
-      alert("Error in getting blogs");
+      toast.error('Error Fetching Blogs!')
       console.log(err);
     }
 
@@ -35,10 +36,16 @@ const Blogs = () => {
   }, [])
 
   return (
-    <div>
-      <div className='text-4xl font-bold text-gray-700 ms-4 mb-3'>Blog </div>
+    <div className='w-full'>
+      <div class="relative flex flex-col w-full justify-center items-center bg-cover bg-center rounded-lg p-10 my-4 shadow-md" style={{ backgroundImage:"url('/assets/images/mountains.jpg')" }}>
+          <h1 class="text-5xl flex flex-col gap-2 text-white z-10 text-center">
+              Health Blogs
+          </h1>
+          <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+      </div>
+
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2'>
-        {blogs.length && blogs.map(blog => (<Blogcard
+        {blogs.map(blog => (<Blogcard
           imageLink={blog?.image}
           key={blog.$id}
           name={blog?.title}

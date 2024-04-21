@@ -1,6 +1,7 @@
 import React from "react"
 import {account} from "../helper/appwrite"
 const AuthContext = React.createContext(null);
+import toast from "react-hot-toast";
 
 const AuthProvider = ({children}) => {
   const [isSignedIn, setIsSignedIn] = React.useState(false);
@@ -29,6 +30,7 @@ export const useAuth = () => {
     account.deleteSession();
     setUser(null);
     setIsSignedIn(false);
+    toast.success('Logged Out!')
   }
 
   return {isSignedIn, setIsSignedIn, user, setUser, logout};

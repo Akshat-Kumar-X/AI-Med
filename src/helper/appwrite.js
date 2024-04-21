@@ -4,7 +4,7 @@ const client = new Client();
 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('65f32c6539fecb40765c');
+    .setProject('65f7bcc360876784359f');
 
 const account = new Account(client);
 const storage = new Storage(client);
@@ -23,3 +23,4 @@ const getCurrentUser = async () => {
 };
 
 export { account, client , getCurrentUser, storage, ID, db};
+

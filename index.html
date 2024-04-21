@@ -9,5 +9,23 @@
   <body class="bg-[#F7F6F6]">
     <div id="root" class="bg-[#F7F6F6]"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "AI Med Bot",
+          "botConversationDescription": "Stay Healthy with AImed!",
+          "botId": "2257b37f-5e70-4c3a-a8bc-6cbba3328c8a",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "2257b37f-5e70-4c3a-a8bc-6cbba3328c8a",
+          "webhookId": "7ce5a4fe-3228-4a42-961a-1a346e3730cf",
+          "lazySocket": true,
+          "themeName": "modern",
+          "frontendVersion": "v1",
+          "showPoweredBy": false,
+          "theme": "modern",
+          "themeColor": "#51C5F9"
+      });
+    </script>
   </body>
 </html>

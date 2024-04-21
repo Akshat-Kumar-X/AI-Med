@@ -103,6 +103,13 @@ const data = [
       tag1: 'hair',
       tag2: 'care',
     },
+    {
+      productImg: 'https://www.netmeds.com/images/product-v1/600x600/1044251/aryanveda_blemishend_face_cream_50_gm_412983_0_0.jpg',
+      productName: 'Face Cream',
+      price: '375',
+      tag1: 'Skin',
+      tag2: 'Moisturizer',
+    },
     
   ];
   

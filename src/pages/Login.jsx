@@ -3,6 +3,7 @@ import Auth from "../components/Auth";
 import { account } from "../helper/appwrite";
 import { useNavigate } from "react-router-dom";
 import {useAuth} from "../contexts/auth-provider";
+import toast from "react-hot-toast";
 
 const Loginbtn = ({ onClick }) => {
   return (
@@ -26,9 +27,10 @@ const Login = () => {
         setUser(user);
         localStorage["user"] = JSON.stringify(user);
         navigate("/");
+        toast.success('Welcome Back! ' + user.name);
       })
       .catch((err) => {
-        alert(err);
+        toast.error(err.message);
       });
   };
 

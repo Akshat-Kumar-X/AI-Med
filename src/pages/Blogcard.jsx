@@ -16,7 +16,7 @@ const Blogcard = ({ imageLink, name, description }) => {
       </div>
       <div className="px-6 py-4">
         <a href="#"
-            className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Best
+            className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">
             {name}</a>
         <p className="text-gray-500 text-sm">
             {description}

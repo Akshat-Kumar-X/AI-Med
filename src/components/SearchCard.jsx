@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoLocationSharp } from "react-icons/io5";
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 
 const SearchCard = ({ name, occupation, district, experience, email, imageUrl }) => {
   const [selectedSlot, setSelectedSlot] = useState(null);
@@ -16,9 +16,8 @@ const SearchCard = ({ name, occupation, district, experience, email, imageUrl })
         e.preventDefault(); 
         setBookedAppointment(selectedSlot);
         setDialogBox(false);
-        alert("success");
         setSelectedSlot(null); // Reset selected slot after booking
-        toast.success("Success Notification !")
+        toast.success("Success Notification!")
       }
     };
 

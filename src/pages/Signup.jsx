@@ -3,6 +3,7 @@ import Auth from '../components/Auth'
 import { account } from '../helper/appwrite'
 import { ID } from 'appwrite'
 import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 const Signupbtn = ({onClick}) => {
     return <button onClick={onClick} className="btn btn-primary  bg-blue-400 text-white border-none hover:bg-blue-500">SignUp</button>
@@ -17,9 +18,10 @@ const Signup = () => {
         const promise = account.create(ID.unique(),email, password,name);
 
         promise.then(() =>{
+            toast.success('User Registered Succesfully!')
             navigate('/login')
         }).catch(err =>{
-            alert(err);
+            toast.error(err.message);
         });
     };
 

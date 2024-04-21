@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -15,6 +16,7 @@ const CartPage = () => {
   const clearCart = () => {
     localStorage.removeItem("cartItems");
     setCartItems([]);
+    toast.success('Cart Cleared!');
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
