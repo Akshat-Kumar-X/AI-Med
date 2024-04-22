@@ -27,14 +27,7 @@ Simply visit the hosted link as given beside the repository on github pages.
 
 Contributions to the Health Companion App are welcome! If you'd like to contribute new features, enhancements, or bug fixes, please fork the repository and submit a pull request with your changes.
 
-## Acknowledgements
+## Preview
+![image](https://github.com/Akshat-Kumar-X/AI-Med/assets/112055229/92ec4bb0-9250-4190-b4b1-065ebbe5c4f5)
 
-We would like to thank all contributors to this project for their valuable contributions and support in making the Health Companion App a useful tool for promoting health and well-being.
 
-For any questions or feedback, please contact [email@example.com](mailto:email@example.com).
-
-Enjoy using the Health Companion App and stay healthy!
-
-## Contributes
-Devina, Akshat, Sajag, Chirag
-# AI-Med
