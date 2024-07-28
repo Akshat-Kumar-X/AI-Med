@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Auth from "../components/Auth";
 import { account } from "../helper/appwrite";
 import { useNavigate } from "react-router-dom";
-import {useAuth} from "../contexts/auth-provider";
+import { useAuth } from "../contexts/auth-provider";
 import toast from "react-hot-toast";
 
 const Loginbtn = ({ onClick }) => {
@@ -17,7 +17,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const {isSignedIn, setIsSignedIn, setUser} = useAuth();
+  const { isSignedIn, setIsSignedIn, setUser } = useAuth();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      navigate('/');
+    }
+  }, [isSignedIn, navigate]);
+
   const loginAccount = async () => {
     const promise = account.createEmailPasswordSession(email, password);
     promise
@@ -26,17 +33,12 @@ const Login = () => {
         const user = await account.get();
         setUser(user);
         localStorage["user"] = JSON.stringify(user);
-        navigate("/");
         toast.success('Welcome Back! ' + user.name);
       })
       .catch((err) => {
         toast.error(err.message);
       });
   };
-
-  if(isSignedIn) {
-    navigate('/')
-  }
 
   return (
     <Auth

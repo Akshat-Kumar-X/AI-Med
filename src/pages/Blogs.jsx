@@ -37,11 +37,11 @@ const Blogs = () => {
 
   return (
     <div className='w-full'>
-      <div class="relative flex flex-col w-full justify-center items-center bg-cover bg-center rounded-lg p-10 my-4 shadow-md" style={{ backgroundImage:"url('/assets/images/mountains.jpg')" }}>
-          <h1 class="text-5xl flex flex-col gap-2 text-white z-10 text-center">
+      <div className="relative flex flex-col w-full justify-center items-center bg-cover bg-center rounded-lg p-10 my-4 shadow-md" style={{ backgroundImage:"url('/assets/images/mountains.jpg')" }}>
+          <h1 className="text-5xl flex flex-col gap-2 text-white z-10 text-center">
               Health Blogs
           </h1>
-          <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+          <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-2'>
